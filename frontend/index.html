@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>오늘의 할 일</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/app.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header><span class="eyebrow">하나씩, 차근차근</span><h1>오늘의 할 일<span class="dot">.</span></h1><p>작은 일부터 시작해 보세요.</p></header>
+    <section class="panel" aria-label="할 일 관리">
+      <form id="todo-form">
+        <label for="todo-input">새로운 할 일</label>
+        <div class="input-row"><input id="todo-input" name="title" placeholder="어떤 일을 해볼까요?" maxlength="200" required autocomplete="off"><button type="submit">추가 <span aria-hidden="true">＋</span></button></div>
+      </form>
+      <div class="list-header"><h2>나의 목록</h2><span id="count" aria-live="polite">불러오는 중</span></div>
+      <p id="status" role="status"></p>
+      <ul id="todo-list" aria-label="할 일 목록"></ul>
+      <div id="empty" hidden><span aria-hidden="true">✓</span><p>아직 할 일이 없어요.</p><small>위에서 첫 번째 할 일을 추가해 보세요.</small></div>
+    </section>
+    <footer>기록한 할 일은 이 컴퓨터에 저장됩니다.</footer>
+  </main>
+</body>
+</html>
